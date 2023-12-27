@@ -393,15 +393,304 @@
   | 二元运算符 | 出上下之外全是二元             |
   | 三元运算符 | `(条件表达式) ? 结果1 : 结果2` |
 
+* 位运算(& | ^ ~ << >> >>>)
+
+  * `<<` 向左移动一位，结果在原有基础上 * 2；（正负数都适用）
+
+    ```java
+    int num = 7;
+    System.out.println(num << 1); 	// 结果为14
+    System.out.println(num << 2); 	// 结果为28
+    System.out.println(num << 3); 	// 结果为56
+    ```
+
+  * `>>` 向右移动以为，结果在原有基础上 / 2,如果不能整除，则向下取整
+
+  * `>>>` 无符号右移 ，左边空位直接补零
+
+  * & 
+
+    ```java
+    0000 0000 1000 0000			// 256
+    0000 0000 0000 0001 		// 1
+    256 & 1 = 
+    0000 0000 0000 0000			// 0
+    ```
+
+  * |
+
+    ```java
+    0000 0000 0001 0001			// 17
+    0000 0000 0010 0010			// 34
+    9 | 18 = 
+    0000 0000 0011 0011			// 51
+    ```
+
+  * 案例
+
+    1. 高效的方式计算 2 * 8
+
+       ```java
+       2 >> 3 或
+       8 >> 1
+       ```
+
+    2. 如何交换两个int型的变量？String呢？
+
+       ```java
+       // 位运算的方式
+       int a = 10;
+       int b = 100;
+       a = a ^ b;
+       b = a ^ b;
+       a = a ^ b;
+       // 传统方式
+       int a = 10;
+       int b = 100;
+       int temp;
+       temp = a;
+       a = b;
+       b = temp;
+       ```
+
+
+## 第二章复习
+
+### 一、随堂复习
+
+#### 1.1 关键字、保留字
+
+#### 1.2 标识符
+
+#### 1.3 变量的基本使用
+
+#### 1.4 基本数据类型变量的使用
+
+#### 1.5 基本数据类型变量间的运算规则
+
+##### 1.5.1 自动类型提升
+
+##### 1.5.2 强制类型转换
+
+#### 1.6 String类的使用、基本数据类型变量之间的计算
+
+#### 1.7 运算符
+
+## 第三章 流程控制语句
+
+### 1. 顺序结构
+
+顺序结构就是从上到下依次执行的代码结构就是顺序结构
+
+### 2. 分支结构
+
+#### 2.1 if-else条件判断语句
+
+```java
+// 格式1
+if(条件表达式){
+    代码块
+}
+// 格式2
+if(条件表达式){
+    代码块1
+}else{
+    代码块2
+}
+// 格式3
+if(条件表达式1){
+    代码块1
+}else if(条件表达式2){
+    代码块2
+}else if(条件表达式3){
+    代码块3
+}else{
+    代码块4
+}
+// if else 的嵌套
+if(条件语句1){
+    if(条件语句2){
+        代码块1
+    }else{
+        代码块2
+    }
+}else{
+    代码块3
+}
+```
+
+* 案例1：成年人心率的正常范围是每分钟60-100次，体检时，如果心率不在此范围内，则提示需要进一步检查
+
+  ```java
+  // heartRate 表示心率
+  int heartRate = 80;
+  
+  if(heartRate >= 60 && heartRate <= 100){
+  	System.out.println("心率正常");
+  	
+  }else{
+  	System.out.println("需要进一步检查");
+  }
+  System.out.println();
+  ```
+
+* 案例2：定义一个整数，判定是偶数还是奇数
+
+  ```java
+  // numericalJudgment 表示数值判断
+  int numericalJudgment = 2;
+  if(numericalJudgment % 2 == 0 && numericalJudgment != 2){
+  	System.out.println(numericalJudgment + "是偶数");
+  }else{
+  	System.out.println(numericalJudgment + "是奇数");
+  }
+  ```
+
+* 案例3：岳云鹏参加java考试，她和父亲岳不群达成承诺：如果
+
+  * 成绩为100分，奖励一辆帕拉梅拉
+
+  * 成绩为80-99，奖励一台捷安特
+
+  * 成绩为60-79，奖励欢乐谷游玩一天
+
+  * 其余，胖揍一顿
+
+    ```java
+    // examScoress 表示考试成绩
+    int examScoress = 90;
+    if(examScoress == 100){
+    	System.out.println("帕拉梅拉一台");
+    }else if(examScoress >= 80 && examScoress <100){
+    	System.out.println("捷安特一台");
+    }else if(examScoress >= 60 && examScoress < 80){
+    	System.out.println("欢乐谷一日游");
+    }else{
+    	System.out.println("男女混合双打一次");
+    }
+    ```
+
+* 案例4：由键盘输入三个整数分别存储为num1 num2 num3,对他们进行排序，并且从小到大输出
+
+  ```java
+  import java.util.Scanner;
+  class ProcessControl{
+  	public static void main(String[] args){
+  		Scanner scan = new Scanner(System.in);
+  		int num1 = scan.nextInt();
+  		int num2 = scan.nextInt();
+  		int num3 = scan.nextInt();
+  		if(num1 > num2){
+  			if(num3 > num1){
+  				System.out.println(" " + num2 + " " + num1 + " " + num3);
+  			}else if(num3 < num2){
+  				System.out.println(" " + num3 + " " + num2 + " " + num1);
+  			}else{
+  				System.out.println(" " + num2 + " " + num3 + " " + num1);
+  			}
+  		}else{
+  			if(num3 < num1){
+  				System.out.println(" " + num3 + " " + num1 + " " + num2);
+  			}else if(num3 > num2){
+  				System.out.println(" " + num1 + " " + num2 + " " + num3);
+  			}else{
+  				System.out.println(" " + num1 + " " + num3 + " " + num2);
+  			}
+  		}
+  		System.out.println();
+  	}
+  	
+  }
+  ```
+  
+  #### 2.2 switch-case条件判断语句
+  
+  ```java
+  switch(表达式){
+      case 常量1:执行语句1；break;
+      case 常量2:执行语句2；break;
+      case 常量3:执行语句3；break;
+  }
+  ```
+  
+  ```java
+  int num = 10;
+  switch(num){
+  	case 1:System.out.println("1");break;
+  	case 10:System.out.println("10");break;
+  	case 100:System.out.println("100");break;
+  }
+  ```
+  
   
 
+### 3. Scanner:键盘输入功能的实现
 
+* 如何从键盘获取不同的数据类型
 
+* 键盘输入代码的四个步骤：
 
+  1. 导包`import java.util.Scanner`;
+  2. 创建Scanner类型的对象：`Scanner scan = new Scanner(System.in)`
+  3. 调用Scanner类的相关方法`(next() / nextXxx())`,来获取指定数据类型的变量
+  4. 释放资源：`scan.close();`
 
+* 案例：注册交友网站需要输入信息
 
+  ```java
+  // process control 意思是流程控制
+  import java.util.Scanner;
+  class ProcessControl{
+  	public static void main(String[] args){
+  		Scanner scan = new Scanner(System.in);
+  		System.out.println("please input your age ~");
+  		int age = scan.nextInt();
+  		System.out.println("please input your name ~");
+  		String name = scan.next();
+  		System.out.println("please input your gender ~");
+  		String gender = scan.next();
+  		System.out.println("please input your address ~");
+  		String address = scan.next();
+  		System.out.println("please input your maritalStatus ~");
+  		Boolean maritalStatus = scan.nextBoolean();
+  		// System.out.println(maritalStatus.equals("true"));
+  		System.out.println("my name is " + name + ",i'm " + age + " years old,i'm a " + gender + ",i'm " + maritalStatus + ".i live in " + address);
+  		
+  		scan.close();
+  	}
+  	
+  }
+  ```
 
+### 4. 如何获取一个随机数
 
+如何产生一个指定范围的随机整数？
+
+1. Math类的random()方法的调用，会返回一个（0，1）范围内的double型值
+
+2. `Math.random() * 100 --->>[0,100);`
+
+   `(int)Math.random() * 100 ; --->> [0,99]`
+
+   `(int)Math.random() * 100 + 5; --->> [5,104]`
+
+3. 如何获取[a,b]范围内的随机整数？`(int)Math.random() * (b - a + 1) + a`
+
+4. 举例
+
+   ```java
+   double a = (int)Math.random() * 5 + 5;
+   System.out.println(a);
+   ```
+
+### 案例
+
+1. 使用for循环实现输出菱形
+
+   ```java
+   ```
+
+   
 
 
 
