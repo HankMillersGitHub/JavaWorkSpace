@@ -688,9 +688,62 @@ if(条件语句1){
 1. 使用for循环实现输出菱形
 
    ```java
+   /*
+   								第i行	空格个数j	*个数k		j = 5 - i
+   			-----*				0		5			1			k = 2 * i + 1
+   			----***				1		4			3
+   			---*****			2		3			5
+   			--*******			3		2			7
+   			-*********			4		1			9	
+   			***********			5		0			11
+   			
+   			-*********			0		1			9			j = i + 1
+   			--*******			1		2			7			k = 2 * (5 - i) + 1
+   			---*****			2		3			5
+   			----***				3		4			3
+   			-----*				4		5			1
+   			
+   		*/
+   		// 上半部分
+   		for(int i = 0;i <= 5;i++){
+   			for(int j = 0;j < 5 - i;j++){
+   				System.out.print(" ");
+   			}
+   			for(int k = 0;k < 2 * i + 1;k++){
+   				System.out.print("*");
+   			}
+   			System.out.println("");
+   		}
+   		// 下半部分
+   		for(int i = 0;i < 5;i++){
+   			for(int j = 0;j < i + 1;j++){
+   				System.out.print(" ");
+   			}
+   			for(int k = 1;k < 2 * (5 - i);k++){
+   				System.out.print("*");
+   			}
+   			System.out.println("");
+   		}
    ```
 
-   
+2. 99乘法表
+
+   ```java
+   for(int i = 1;i <= 9;i++){
+   			for(int j = 1;j <= i;j++){
+   				System.out.print(j + "*" + i + "=" + i * j +" ");
+   			}
+   			System.out.println("");
+   		}
+   ```
+
+   5. 关键字break和continue的使用
+
+      break：结束循环
+
+      continue：结束本次循环，继续下一次循环
+
+## 第三章 面向对象
 
 
 
