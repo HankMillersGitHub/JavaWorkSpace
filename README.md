@@ -476,15 +476,15 @@
 
 #### 1.7 运算符
 
-## 第三章 流程控制语句
+# 第三章 流程控制语句
 
-### 1. 顺序结构
+## 1. 顺序结构
 
 顺序结构就是从上到下依次执行的代码结构就是顺序结构
 
-### 2. 分支结构
+## 2. 分支结构
 
-#### 2.1 if-else条件判断语句
+### 2.1 if-else条件判断语句
 
 ```java
 // 格式1
@@ -603,7 +603,7 @@ if(条件语句1){
   }
   ```
   
-  #### 2.2 switch-case条件判断语句
+  ### 2.2 switch-case条件判断语句
   
   ```java
   switch(表达式){
@@ -624,7 +624,7 @@ if(条件语句1){
   
   
 
-### 3. Scanner:键盘输入功能的实现
+## 3. Scanner:键盘输入功能的实现
 
 * 如何从键盘获取不同的数据类型
 
@@ -662,7 +662,7 @@ if(条件语句1){
   }
   ```
 
-### 4. 如何获取一个随机数
+## 4. 如何获取一个随机数
 
 如何产生一个指定范围的随机整数？
 
@@ -683,7 +683,27 @@ if(条件语句1){
    System.out.println(a);
    ```
 
-### 案例
+## 5. 关键字break和continue的使用
+
+break：结束循环
+
+continue：结束本次循环，继续下一次循环
+
+内层结束外层循环：
+
+```java
+breakOuterLoop:for(){
+    for(){
+        ....
+        break breakOuterLoop;
+        continue:breakOuterLoop;
+    }
+}
+```
+
+
+
+## 案例
 
 1. 使用for循环实现输出菱形
 
@@ -737,13 +757,50 @@ if(条件语句1){
    		}
    ```
 
-   5. 关键字break和continue的使用
+3. 找出100以内的所有素数？10000以内的？
 
-      break：结束循环
+   ```java
+   // 第一种方法
+   for(int i = 2;i<100;i++){
+   	int number = 0;
+   	for(int j = 2;j<i;j++){
+   		if(i%j==0){
+   			number++;
+   		}
+   	}
+   	if(number==0){
+   		System.out.println(i);
+   	}
+   }
+   // 第二种方法
+   for(int i = 2;i<100;i++){
+   	boolean flag = false;
+   	for(int j = 2;j<i;j++){
+   		if(i%j==0){
+   			flag = true;
+   		}
+   	}
+   	if(!flag){
+   		System.out.println(i);
+   	}
+   }
+   // 优化之后的第二种方法
+   for(int i = 2;i<100;i++){
+   	boolean flag = false;
+   	for(int j = 2;j<=Math.sqrt(i);j++){
+   		if(i%j==0){
+   			flag = true;
+              	 break;
+               /*原因是两个约数最终都会慢慢靠近i的开方*/
+   		}
+   	}
+   	if(!flag){
+   		System.out.println(i);
+   	}
+   }
+   ```
 
-      continue：结束本次循环，继续下一次循环
-
-## 第三章 面向对象
+   # 总项目：谷粒记账
 
 
 
