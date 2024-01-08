@@ -5,6 +5,9 @@
       <module fileurl="file://$PROJECT_DIR$/JavaSECode.iml" filepath="$PROJECT_DIR$/JavaSECode.iml" />
       <module fileurl="file://$PROJECT_DIR$/chapter04/chapter04.iml" filepath="$PROJECT_DIR$/chapter04/chapter04.iml" />
       <module fileurl="file://$PROJECT_DIR$/chapter05/chapter05.iml" filepath="$PROJECT_DIR$/chapter05/chapter05.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chapter05/practice05/practice05_01.iml" filepath="$PROJECT_DIR$/chapter05/practice05/practice05_01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chapter05/practice05_02/practice05_02.iml" filepath="$PROJECT_DIR$/chapter05/practice05_02/practice05_02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chapter05/practice05_03_ObjectArray/practice05_03_ObjectArray.iml" filepath="$PROJECT_DIR$/chapter05/practice05_03_ObjectArray/practice05_03_ObjectArray.iml" />
     </modules>
   </component>
 </project>

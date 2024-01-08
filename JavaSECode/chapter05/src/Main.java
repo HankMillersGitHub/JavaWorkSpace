@@ -9,7 +9,9 @@
  */
 public class Main {
     public static void main(String[] args) {
-
-
+        Factorial a = new Factorial();
+        int sum = 0;
+        sum += a.factorial(10);
+        System.out.println(sum);
     }
 }
