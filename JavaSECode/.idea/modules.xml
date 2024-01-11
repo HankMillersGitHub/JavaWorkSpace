@@ -3,11 +3,13 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/JavaSECode.iml" filepath="$PROJECT_DIR$/JavaSECode.iml" />
-      <module fileurl="file://$PROJECT_DIR$/chapter04/chapter04.iml" filepath="$PROJECT_DIR$/chapter04/chapter04.iml" />
-      <module fileurl="file://$PROJECT_DIR$/chapter05/chapter05.iml" filepath="$PROJECT_DIR$/chapter05/chapter05.iml" />
-      <module fileurl="file://$PROJECT_DIR$/chapter05/practice05/practice05_01.iml" filepath="$PROJECT_DIR$/chapter05/practice05/practice05_01.iml" />
-      <module fileurl="file://$PROJECT_DIR$/chapter05/practice05_02/practice05_02.iml" filepath="$PROJECT_DIR$/chapter05/practice05_02/practice05_02.iml" />
-      <module fileurl="file://$PROJECT_DIR$/chapter05/practice05_03_ObjectArray/practice05_03_ObjectArray.iml" filepath="$PROJECT_DIR$/chapter05/practice05_03_ObjectArray/practice05_03_ObjectArray.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chapter04_Array/chapter04_Array.iml" filepath="$PROJECT_DIR$/chapter04_Array/chapter04_Array.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chapter05_class&amp;object/chapter05_class&amp;object.iml" filepath="$PROJECT_DIR$/chapter05_class&amp;object/chapter05_class&amp;object.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chapter06_constructor/chapter06_constructor.iml" filepath="$PROJECT_DIR$/chapter06_constructor/chapter06_constructor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chapter05_class&amp;object/practice05/practice05_01.iml" filepath="$PROJECT_DIR$/chapter05_class&amp;object/practice05/practice05_01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chapter05_class&amp;object/practice05_02/practice05_02.iml" filepath="$PROJECT_DIR$/chapter05_class&amp;object/practice05_02/practice05_02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chapter05_class&amp;object/practice05_03_ObjectArray/practice05_03_ObjectArray.iml" filepath="$PROJECT_DIR$/chapter05_class&amp;object/practice05_03_ObjectArray/practice05_03_ObjectArray.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chapter06_constructor/pratice01_deposit/pratice01_deposit.iml" filepath="$PROJECT_DIR$/chapter06_constructor/pratice01_deposit/pratice01_deposit.iml" />
     </modules>
   </component>
 </project>

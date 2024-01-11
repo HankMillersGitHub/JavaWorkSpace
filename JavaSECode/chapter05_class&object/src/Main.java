@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 /**
  * ClassName : ${Name}
  * Package :
@@ -13,5 +15,6 @@ public class Main {
         int sum = 0;
         sum += a.factorial(10);
         System.out.println(sum);
+        Scanner scanner = new Scanner(System.in);
     }
 }
